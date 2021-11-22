@@ -1,15 +1,48 @@
 <!DOCTYPE html>
 <html>
 <body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<style>
+.btn {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
 
+/* Green */
+.success {
+  color: green;
+}
+
+.success:hover {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Blue */
+.info {
+  color: dodgerblue;
+}
+
+.info:hover {
+  background: #2196F3;
+  color: white;
+}
+.verde{
+	color: red;
+}
+</style>
 <h2>Nilza's</h2>
-<p>Clique no botão para saber se você é corno ou comedor de casadas:</p>
+<p>Clique no botão para saber se você é <span style="color: red;">corno</span> ou <span style="color: blue;"><strong> comedor de casadas:</strong></span></p>
 
-<button onclick="select()">O que será?</button>
+<button id="padrao" class="btn success" onclick="select.call(this)">O que será?</button>
 
 <p id="cornolisse"></p>
 <img id= "image" src="">
-<p>Uma realização: Pero Garibel!</p>
+<p id="rd" >Uma realização: Pero Garibel!</p>
 <script>
 function select() {
 var x = Math.floor(Math.random() * 101);
@@ -17,11 +50,20 @@ var y = Math.floor(Math.random() * 101);
   if(x <=50){
 document.getElementById("cornolisse").innerHTML = "É %"+y+" corno!";
 document.getElementById("image").src="http://memecrunch.com/meme/B8G82/corno/image.gif";
+var text = document.getElementById("padrao").firstChild;
+   text.data = "Fazer Novo Teste";
+   $(this).removeClass('btn success');
+  $(this).addClass('btn info');
 }else{
 document.getElementById("cornolisse").innerHTML = "É %"+y+" comedor de casadas!";
 document.getElementById("image").src="https://c.tenor.com/-Zwd86MwDxoAAAAC/oi-casada-tilapia.gif";
+var text = document.getElementById("padrao").firstChild;
+   text.data = "Fazer Novo Teste";
+   $(this).removeClass('btn success');
+  $(this).addClass('btn info');
 }
 }
+
 </script>
 
 </body>
