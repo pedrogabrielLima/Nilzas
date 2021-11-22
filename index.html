@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAADSx/8AAAAAAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAERERERERERERERESERERERERESAhERERERESAAIRERERESAAACERERESAAAAAhERESAAAAAAIRESAAAAAAACERIAAAAAAAIREgAAAAAAAhESAAACAAACEREgACEgACERERIiERIiERERERERERERERERERERERERERERERERERH//wAA/v8AAPx/AAD4PwAA8B8AAOAPAADABwAAgAMAAIADAACAAwAAgAMAAMEHAADjjwAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon" />
+</head>
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <style>
@@ -48,19 +51,20 @@ function select() {
 var x = Math.floor(Math.random() * 101);
 var y = Math.floor(Math.random() * 101);
   if(x <=50){
-document.getElementById("cornolisse").innerHTML = "É %"+y+" corno!";
-document.getElementById("image").src="http://memecrunch.com/meme/B8G82/corno/image.gif";
-var text = document.getElementById("padrao").firstChild;
-   text.data = "Fazer Novo Teste";
-   $(this).removeClass('btn success');
-  $(this).addClass('btn info');
+    document.getElementById("cornolisse").innerHTML = "É %"+y+" corno!";
+    document.getElementById("image").src="http://memecrunch.com/meme/B8G82/corno/image.gif";
+    var text = document.getElementById("padrao").firstChild;
+    text.data = "Fazer Novo Teste";
+    $(this).removeClass('btn success');
+    $(this).addClass('btn info');
 }else{
-document.getElementById("cornolisse").innerHTML = "É %"+y+" comedor de casadas!";
-document.getElementById("image").src="https://c.tenor.com/-Zwd86MwDxoAAAAC/oi-casada-tilapia.gif";
-var text = document.getElementById("padrao").firstChild;
-   text.data = "Fazer Novo Teste";
-   $(this).removeClass('btn success');
-  $(this).addClass('btn info');
+
+    document.getElementById("cornolisse").innerHTML = "É %"+y+" comedor de casadas!";
+    document.getElementById("image").src="https://c.tenor.com/-Zwd86MwDxoAAAAC/oi-casada-tilapia.gif";
+    var text = document.getElementById("padrao").firstChild;
+    text.data = "Fazer Novo Teste";
+    $(this).removeClass('btn success');
+    $(this).addClass('btn info');
 }
 }
 
