@@ -39,29 +39,41 @@
 	color: red;
 }
 </style>
-<h2>Nilza's</h2>
+<h2 style="text-align: center;">Nilza's</h2>
 <p>Clique no botão para saber se você é <span style="color: red;">corno</span> ou <span style="color: blue;"><strong> comedor de casadas:</strong></span></p>
 
 <button id="padrao" class="btn success" onclick="select.call(this)">O que será?</button>
 
 <p id="cornolisse"></p>
 <img id= "image" src="">
+<video id="casadas" style="display: none;" autoplay>
+    <source src="" type="video/mp4">
+  </video>
 <p id="rd" >Uma realização: Pero Garibel!</p>
 <script>
 function select() {
 var x = Math.floor(Math.random() * 101);
 var y = Math.floor(Math.random() * 101);
+var video = document.getElementById("casadas");
+var imagem = document.getElementById("image");
   if(x <=50){
-    document.getElementById("cornolisse").innerHTML = "É %"+y+" corno!";
-    document.getElementById("image").src="http://memecrunch.com/meme/B8G82/corno/image.gif";
+    document.getElementById("cornolisse").innerHTML = "Você é "+y+"% <strong>corno!</strong>";
+    imagem.src="http://memecrunch.com/meme/B8G82/corno/image.gif";
     var text = document.getElementById("padrao").firstChild;
     text.data = "Fazer Novo Teste";
     $(this).removeClass('btn success');
     $(this).addClass('btn info');
+    video.pause();
+    video.style.display = "none";
+    imagem.style.display="block";
 }else{
 
-    document.getElementById("cornolisse").innerHTML = "É %"+y+" comedor de casadas!";
-    document.getElementById("image").src="https://c.tenor.com/-Zwd86MwDxoAAAAC/oi-casada-tilapia.gif";
+    document.getElementById("cornolisse").innerHTML = "Você é "+y+"% <strong>comedor de casadas!</strong>";
+    
+    
+    video.src="chicote.mp4";
+    video.style.display = "block";
+    imagem.style.display="none";
     var text = document.getElementById("padrao").firstChild;
     text.data = "Fazer Novo Teste";
     $(this).removeClass('btn success');
