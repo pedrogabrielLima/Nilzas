@@ -3,85 +3,12 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAADSx/8AAAAAAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAERERERERERERERESERERERERESAhERERERESAAIRERERESAAACERERESAAAAAhERESAAAAAAIRESAAAAAAACERIAAAAAAAIREgAAAAAAAhESAAACAAACEREgACEgACERERIiERIiERERERERERERERERERERERERERERERERERH//wAA/v8AAPx/AAD4PwAA8B8AAOAPAADABwAAgAMAAIADAACAAwAAgAMAAMEHAADjjwAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<style>
-.btn {
-  border: none;
-  background-color: inherit;
-  padding: 14px 28px;
-  font-size: 16px;
-  cursor: pointer;
-  display: inline-block;
-}
-
-/* Green */
-.success {
-  color: green;
-}
-
-.success:hover {
-  background-color: #04AA6D;
-  color: white;
-}
-
-/* Blue */
-.info {
-  color: dodgerblue;
-}
-
-.info:hover {
-  background: #2196F3;
-  color: white;
-}
-.verde{
-	color: red;
-}
-</style>
-<h2 style="text-align: center;">Nilza's</h2>
-<p>Clique no botão para saber se você é <span style="color: red;">corno</span> ou <span style="color: blue;"><strong> comedor de casadas:</strong></span></p>
-
-<button id="padrao" class="btn success" onclick="select.call(this)">O que será?</button>
-
-<p id="cornolisse"></p>
-<img id= "image" src="">
-<video id="casadas" style="display: none;" autoplay>
-    <source src="" type="video/mp4">
-  </video>
-<p id="rd" >Uma realização: Pero Garibel!</p>
-<script>
-function select() {
-var x = Math.floor(Math.random() * 101);
-var y = Math.floor(Math.random() * 101);
-var video = document.getElementById("casadas");
-var imagem = document.getElementById("image");
-  if(x <=50){
-    document.getElementById("cornolisse").innerHTML = "Você é "+y+"% <strong>corno!</strong>";
-    imagem.src="http://memecrunch.com/meme/B8G82/corno/image.gif";
-    var text = document.getElementById("padrao").firstChild;
-    text.data = "Fazer Novo Teste";
-    $(this).removeClass('btn success');
-    $(this).addClass('btn info');
-    video.pause();
-    video.style.display = "none";
-    imagem.style.display="block";
-}else{
-
-    document.getElementById("cornolisse").innerHTML = "Você é "+y+"% <strong>comedor de casadas!</strong>";
-    
-    
-    video.src="chicote.mp4";
-    video.style.display = "block";
-    imagem.style.display="none";
-    var text = document.getElementById("padrao").firstChild;
-    text.data = "Fazer Novo Teste";
-    $(this).removeClass('btn success');
-    $(this).addClass('btn info');
-}
-}
-
-</script>
+  <h1 style="text-align: center;">Nilza's</h1>
+<p style="text-align: center;">Um novo Nilzas's verso está por vir</p>
+<button style="cursor: pointer;"><a href="oldNilzas.html">oldNilza's</a></button>
 
 </body>
 </html>
