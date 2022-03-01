@@ -214,6 +214,10 @@ small, .small {
   font-size: 0.875em;
 }
 
+tiny, .tiny {
+  font-size: 0.675em;
+}
+
 mark, .mark {
   padding: 0.2em;
   background-color: #fcf8e3;
